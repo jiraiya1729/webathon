@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leaderboard</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+    <h1>Leaderboard</h1>
+    <table>
+        <thead>
+            <tr>
+                <th style="width: 10%;">Rank</th>
+                <th>Name</th>
+                <th>Score</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% set rank = 1 %}
+            {% for student in sorted_students %}
+                <tr>
+                    <td style="width: 10%;">{{ rank }}</td>
+                    <td>{{ student.name }}</td>
+                    <td>{{ student.latest_test_score }}</td>
+                </tr>
+                {% set rank = rank + 1 %}
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>

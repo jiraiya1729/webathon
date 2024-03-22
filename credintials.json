@@ -9,5 +9,6 @@
   "token_uri": "https://oauth2.googleapis.com/token",
   "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
   "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/firebase-adminsdk-wqav5%40authenticate-efe79.iam.gserviceaccount.com",
+  "storageBucket": "gs://authenticate-efe79.appspot.com",
   "universe_domain": "googleapis.com"
 }

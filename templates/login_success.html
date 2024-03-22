@@ -6,16 +6,30 @@
     <title>Login Success</title>
 </head>
 <body>
-    <h1>Login Successful</h1>
-    <div>
-        <p>Name: {{ user_data['name'] }}</p>
-        <p>Email: {{ user_data['email'] }}</p>
-        <p>College: {{ user_data['college'] }}</p>
-        <p>Course: {{ user_data['course'] }}</p>
-        <p>Number: {{ user_data['number'] }}</p>
-        <p>Role: {{ user_data['role'] }}</p>
-        <p>Gender: {{ user_data['gender'] }}</p>
-        <p>Date of Birth: {{ user_data['dob'] }}</p>
+    <nav style="background-color: #333; color: #fff; padding: 10px;">
+        <ul style="list-style-type: none; margin: 0; padding: 0;">
+            <li style="display: inline; margin-right: 10px;"><a href="/" style="color: #fff; text-decoration: none;">Home</a></li>
+            <li style="display: inline; margin-right: 10px;"><a href="/profile" style="color: #fff; text-decoration: none;">Profile</a></li>
+            <!-- Add more menu items here if needed -->
+        </ul>
+    </nav>
+
+    <div style="margin: 20px; padding: 20px; border: 1px solid #ccc; border-radius: 5px; background-color: #f9f9f9;">
+        <h1 style="color: #333; margin-bottom: 10px;">Login Successful</h1>
+        <div style="margin-top: 20px;">
+            <p><strong>Name:</strong> <span id="name">{{ user_data['name'] }}</span></p>
+            <p><strong>Email:</strong> <span id="email">{{ user_data['email'] }}</span></p>
+            <p><strong>College:</strong> <span id="college">{{ user_data['college'] }}</span></p>
+            <p><strong>Course:</strong> <span id="course">{{ user_data['course'] }}</span></p>
+            <p><strong>Number:</strong> <span id="number">{{ user_data['number'] }}</span></p>
+            <p><strong>Role:</strong> <span id="role">{{ user_data['role'] }}</span></p>
+            <p><strong>Gender:</strong> <span id="gender">{{ user_data['gender'] }}</span></p>
+            <p><strong>Date of Birth:</strong> <span id="dob">{{ user_data['dob'] }}</span></p>
+            <!-- Display the image -->
+            <img src="{{ user_data['image_url'] }}" alt="User Image" style="max-width: 200px; border-radius: 5px; margin-top: 20px;">
+        </div>
     </div>
+    <a href="{{ url_for('leaderboard') }}">LearderBoard</a>
+    <a href="{{ url_for('discussion') }}">Discussion</a>
 </body>
 </html>
