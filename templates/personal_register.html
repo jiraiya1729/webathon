@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MocK</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      background-color: #7c3aed; /* Setting background color to the body */
+    }
+    .container {
+      padding: 20px;
+    }
+    .content {
+      max-width: 600px;
+      margin: 0 auto;
+      text-align: center; /* Center aligning the content */
+    }
+    .card-container {
+      background-color: white;
+      border-radius: 8px;
+      padding: 20px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+    .grid {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+    }
+    .card {
+      background-color: #0da9dd;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      transition: transform 0.3s ease;
+      height: 250px;
+      width: calc(50% - 10px); /* Setting width for 2 cards with gap between them */
+      cursor: pointer;
+      text-decoration: none; /* Change cursor to pointer on hover */
+    }
+    .card:hover {
+      transform: scale(1.05);
+    }
+    .card h3 {
+      font-weight: bold;
+      font-size: 1.5rem;
+      margin-bottom: 10px;
+      color: #fff; /* Setting text color to white */
+    }
+    .icon {
+      width: 80px;
+      height: 80px;
+      margin-bottom: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="content">
+      <h2 style="color: white; font-weight: bold; font-size: 2rem; margin-bottom: 20px;">I am</h2>
+      <div class="card-container">
+        <div class="grid">
+          <a href="{{url_for('Teacher_P_register')}}" class="card">
+            <img src="briefcase_icon.svg" alt="Icon" class="icon">
+            <h3>Teacher</h3>
+          </a>
+          <a href="{{url_for('Student_P_register')}}" class="card">
+            <img src="#" alt="Icon" class="icon" width="300" height="300">
+            <h3>Student</h3>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
